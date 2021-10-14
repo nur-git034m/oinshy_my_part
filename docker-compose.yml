@@ -1,0 +1,17 @@
+version: '3.5'
+services:
+
+  postgres:
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_PASSWORD: xX4rW3T07LPj8eHFrGBbZfCD5cnHAnaN21iroLgciL6odnIihUZmYnMUorXh1ecK
+      TZ: Asia/Almaty
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+#      - /home/yerzhan/backups:/backups
+#    restart: always
+
+volumes:
+  data:
